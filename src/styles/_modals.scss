@@ -1,0 +1,112 @@
+@import '_mixins';
+
+.inventory-modal {
+    @include inventory-modal-style();
+
+    //responsive
+    @media (min-width: 768px) {
+        // display: none; 
+        position: fixed;
+        top: 45%;
+        right: -300px; // start off-screen
+        transform: translateY(-50%);
+        transition: right 0.5s ease-out;
+        z-index: 999;
+        align-items: center;
+        // width: 25%; 
+        // height: auto; 
+        //background-color: $text-background; 
+        border-radius: 5px;
+        width: 5%;
+    }
+}
+
+.toolbox-modal {
+    @include toolbox-modal-style();
+
+    //responsive
+    @media (min-width: 768px) {
+        // display: none; 
+        position: fixed;
+        top: 15%;
+        left: -300px; // start off-screen
+        transform: translateY(50%);
+        transition: left 0.5s ease-out;
+        z-index: 999;
+        align-items: center;
+        // width: 25%; 
+        // height: auto; 
+        //background-color: $text-background; 
+        border-radius: 5px;
+    }
+}
+
+.main-map-modal {
+    @include map-modal-base();
+    background-color: $dark-pink;
+    border: 5px solid $yellow;
+    box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+
+    //responsive
+    // @media (min-width: 768px) {
+    //     background-color: $lighter-pink;
+    //     border-color: $text-background;
+    //     box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+    // }
+}
+
+.north-map-modal {
+    @include map-modal-base();
+    background-color: $north-purple;
+    border-color: $text-background;
+    box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+
+    //responsive
+    // @media (min-width: 768px) {
+    //     background-color: $primary-button-color;
+    //     border-color: $text-background;
+    //     box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+    // }
+}
+
+.east-map-modal {
+    @include map-modal-base();
+    background-color: $east-dark-green;
+    border-color: $text-background;
+    box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+
+    //responsive
+    // @media (min-width: 768px) {
+    //     background-color: $primary-button-color;
+    //     border-color: $text-background;
+    //     box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+    // }
+}
+
+.south-map-modal {
+    @include map-modal-base();
+    background-color: $south-pink-orange;
+    border-color: $text-background;
+    box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+
+    //responsive
+    // @media (min-width: 768px) {
+    //     background-color: $primary-button-color;
+    //     border-color: $text-background;
+    //     box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+    // }
+}
+
+.west-map-modal {
+    @include map-modal-base();
+    background-color: $lighter-pink;
+    border-color: $text-background;
+    box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+
+    //responsive
+    // @media (min-width: 768px) {
+    //     background-color: $primary-button-color;
+    //     border-color: $text-background;
+    //     box-shadow: 2px 2px 10px 1px $option-button-box-shadow;
+    // }
+}

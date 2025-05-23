@@ -1,0 +1,77 @@
+@import '_mixins';
+
+.vt323-button {
+    @include button-base();
+    color: var(--main-btn-text, $soft-yellow);
+    background-color: var(--main-btn-bg, $charcoal-dark);
+    border: var(--main-btn-border, 2px solid black);
+    box-shadow: var(--main-btn-bs, 2px 2px 3px 1px black);
+
+    &:hover {
+        background-color: var(--main-btn-hover-bg, $yellow);
+        color: var(--main-btn-hover-text, $charcoal-dark);
+    }
+
+    &:active {
+        background-color: var(--main-btn-hover-bg, $yellow);
+        color: var(--main-btn-hover-text, $charcoal-dark);
+    }
+}
+
+/* 🔹 Secondary Button */
+.vt323-button-secondary {
+    @include button-base();
+    color: var(--sec-btn-text, $charcoal-dark);
+    background-color: var(--sec-btn-bg, $soft-yellow);
+    border: var(--sec-btn-border, 1px solid $yellow);
+    box-shadow: var(--sec-btn-bs, 2px 2px 3px 1px $yellow-glow);
+
+    &:hover {
+        background-color:  var(--sec-btn-hover-bg, $yellow);
+        color: var(--sec-btn-hover-text, $charcoal-dark);
+    }
+}
+
+/* 🔹 Toolbox Button */
+.toolbox-btn {
+    @include button-base();
+    //color: $charcoal-dark;
+    background-color: var(--inv-bg, $dark-blue);
+    //background-image: linear-gradient(180deg, $charcoal, $charcoal-dark);
+    border: var(--inv-border, 5px solid $yellow);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+    width: auto;
+    height: auto;
+    img {
+        content: var(--toolbox-img, url('assets/icons/toolbox yellow.png'));
+    }
+
+    &:hover {
+        background-color: var(--inv-hover-bg, $neon-pink);
+        box-shadow: var(--inv-hover-bs, 2px 5px 1px $bright-yellow-glow);
+    }
+}
+
+/* 🔹 Inventory Button */
+.inventory-button {
+    @include button-base();
+    //color: $charcoal-dark;
+    background-color: var(--inv-bg, $dark-blue);
+    //background-image: linear-gradient(180deg, $charcoal, $charcoal-dark);
+    border: var(--inv-border, 5px solid $yellow);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+    width: auto;
+    height: auto;
+    img {
+        content: var(--inventory-img, url('assets/icons/knapsack yellow.png'));
+    }
+
+    &:hover {
+        background-color: var(--inv-hover-bg, $neon-pink);
+        box-shadow: var(--inv-hover-bs, 2px 5px 1px $bright-yellow-glow);
+    }
+}
